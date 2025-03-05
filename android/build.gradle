@@ -39,6 +39,15 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+        // Java ve Kotlin uyumu için eklenen bölümler
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17  // Java hedef sürümü
+        targetCompatibility JavaVersion.VERSION_17  // Java hedef sürümü
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"  // Kotlin hedef JVM sürümü
+    }
 }
 
 dependencies {
