@@ -2,7 +2,7 @@ group 'rekab.app.background_locator'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.9.0' //'1.4.21'
+    ext.kotlin_version = '1.4.21' // '1.9.0' //
     repositories {
         google()
         jcenter()
@@ -39,6 +39,7 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+    /*
         // Java ve Kotlin uyumu için eklenen bölümler
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17  // Java hedef sürümü
@@ -47,13 +48,13 @@ android {
 
     kotlinOptions {
         jvmTarget = "17"  // Kotlin hedef JVM sürümü
-    }
+    }*/
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    // implementation "com.google.android.gms:play-services-location:18.0.0"
-    implementation "com.google.android.gms:play-services-location:20.0.0"  // Sadece bunu güncelliyoruz
+    implementation "com.google.android.gms:play-services-location:18.0.0"
+    // implementation "com.google.android.gms:play-services-location:20.0.0"  // Sadece bunu güncelliyoruz
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.google.android.material:material:1.0.0'
 
